@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WholebodySense</title>
+<meta name="description" content="WholebodySense: Policy-Agnostic Whole-Body Contact Localization and Force Estimation for Humanoids.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+  :root { --ink:#363636; --accent:#d62728; --link:#3273dc; --pill:#363636; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; background:#fff; color:var(--ink); }
+  body { font-family:"Noto Sans", system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+
+  /* ---------- header (classic project-page style) ---------- */
+  .head { max-width:1100px; margin:0 auto; padding:72px 16px 28px; text-align:center; }
+  .title { font-family:"Google Sans", "Noto Sans", sans-serif; font-weight:500;
+           font-size:clamp(28px, 4.4vw, 48px); line-height:1.2; margin:0 0 22px; color:var(--ink); }
+  .title .hl { color:var(--accent); }
+  .authors { font-family:"Google Sans", sans-serif; font-size:clamp(16px, 2vw, 20px);
+             line-height:1.6; margin:0 0 22px; }
+  .authors a { color:var(--link); text-decoration:none; }
+  .authors a:hover { text-decoration:underline; }
+  .affil { font-family:"Google Sans", sans-serif; font-size:clamp(15px, 1.8vw, 19px); margin:0 0 22px; }
+  .links { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
+  .pill { display:inline-flex; align-items:center; gap:9px; padding:13px 26px; border-radius:999px;
+          background:var(--pill); color:#fff; text-decoration:none; font-size:19px; line-height:1;
+          transition:background .15s; }
+  .pill:hover { background:#111; }
+  .pill i { font-size:20px; }
+  .pill.soon { opacity:.55; pointer-events:none; }
+
+  /* ---------- hero video (SuperMimic-style, white background) ---------- */
+  .hero { max-width:1280px; margin:0 auto; padding:8px 16px 64px; }
+  .hero video { display:block; width:100%; height:auto; aspect-ratio:16 / 9; background:#fff; }
+</style>
+</head>
+<body>
+
+<header class="head">
+  <h1 class="title"><span class="hl">WholebodySense</span>: Policy-Agnostic Whole-Body Contact Localization and Force Estimation for Humanoids</h1>
+
+  <!-- Anonymous during review; fill in after acceptance. -->
+  <p class="authors">Anonymous Author(s)</p>
+
+  <div class="links">
+    <a class="pill" href="#"><i class="fa-solid fa-file-pdf"></i>Paper</a>
+    <a class="pill" href="#"><i class="fa-solid fa-file"></i>arXiv</a>
+    <a class="pill" href="#"><i class="fa-brands fa-youtube"></i>Video</a>
+    <a class="pill" href="#"><i class="fa-brands fa-github"></i>Code</a>
+  </div>
+</header>
+
+<section class="hero">
+  <!-- Hero clip: our own render (hero_render/, v4). -->
+  <video src="media/hero/hero.mp4" poster="media/hero/hero_start.jpg" autoplay muted loop playsinline preload="auto"></video>
+</section>
+
+</body>
+</html>
