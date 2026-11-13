@@ -17,9 +17,11 @@
   body { font-family:"Noto Sans", system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
 
   /* ---------- header (classic project-page style) ---------- */
-  .head { max-width:1100px; margin:0 auto; padding:72px 16px 28px; text-align:center; }
+  /* first screen: header + hero video always fit in one viewport */
+  .first { height:100vh; height:100svh; min-height:560px; display:flex; flex-direction:column; }
+  .head { max-width:1100px; margin:0 auto; padding:clamp(20px, 5vh, 56px) 16px 16px; text-align:center; flex:none; }
   .title { font-family:"Google Sans", "Noto Sans", sans-serif; font-weight:500;
-           font-size:clamp(28px, 4.4vw, 48px); line-height:1.2; margin:0 0 22px; color:var(--ink); }
+           font-size:clamp(28px, 4.4vw, 48px); line-height:1.2; margin:0 0 clamp(10px, 2vh, 22px); color:var(--ink); }
   .title .hl { color:var(--accent); }
   .authors { font-family:"Google Sans", sans-serif; font-size:clamp(16px, 2vw, 20px);
              line-height:1.6; margin:0 0 22px; }
@@ -32,15 +34,17 @@
           transition:background .15s; }
   .pill:hover { background:#111; }
   .pill i { font-size:20px; }
-  .pill.soon { opacity:.55; pointer-events:none; }
+  .pill.soon { background:#ededed; color:#9a9a9a; cursor:default; pointer-events:none; }
+  .soon-note { margin:12px 0 0; font-size:14px; color:#9a9a9a; letter-spacing:.04em; }
 
   /* ---------- hero video (SuperMimic-style, white background) ---------- */
-  .hero { max-width:1280px; margin:0 auto; padding:8px 16px 64px; }
-  .hero video { display:block; width:100%; height:auto; aspect-ratio:16 / 9; background:#fff; }
+  .hero { flex:1 1 0; min-height:0; width:100%; max-width:1280px; margin:0 auto; padding:0 16px 16px; }
+  .hero video { display:block; width:100%; height:100%; object-fit:contain; background:#fff; }
 </style>
 </head>
 <body>
 
+<div class="first">
 <header class="head">
   <h1 class="title"><span class="hl">WholebodySense</span>: Policy-Agnostic Whole-Body Contact Localization and Force Estimation for Humanoids</h1>
 
@@ -48,17 +52,19 @@
   <p class="authors">Anonymous Author(s)</p>
 
   <div class="links">
-    <a class="pill" href="#"><i class="fa-solid fa-file-pdf"></i>Paper</a>
-    <a class="pill" href="#"><i class="fa-solid fa-file"></i>arXiv</a>
-    <a class="pill" href="#"><i class="fa-brands fa-youtube"></i>Video</a>
-    <a class="pill" href="#"><i class="fa-brands fa-github"></i>Code</a>
+    <span class="pill soon" aria-disabled="true" title="Coming soon"><i class="fa-solid fa-file-pdf"></i>Paper</span>
+    <span class="pill soon" aria-disabled="true" title="Coming soon"><i class="fa-solid fa-file"></i>arXiv</span>
+    <span class="pill soon" aria-disabled="true" title="Coming soon"><i class="fa-brands fa-youtube"></i>Video</span>
+    <span class="pill soon" aria-disabled="true" title="Coming soon"><i class="fa-brands fa-github"></i>Code</span>
   </div>
+  <p class="soon-note">Paper, video and code coming soon</p>
 </header>
 
 <section class="hero">
-  <!-- Hero clip: our own render (hero_render/, v4). -->
+  <!-- Hero clip: our own render (hero_render/). -->
   <video src="media/hero/hero.mp4" poster="media/hero/hero_start.jpg" autoplay muted loop playsinline preload="auto"></video>
 </section>
+</div>
 
 </body>
 </html>
